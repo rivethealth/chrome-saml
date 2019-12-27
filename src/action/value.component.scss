@@ -1,0 +1,12 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 8px;
+  width: 500px;
+}
+
+.title {
+  grid-column: span 2;
+  line-height: 1;
+  margin: 0;
+}

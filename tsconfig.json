@@ -1,0 +1,25 @@
+{
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "preserveWhitespaces": false,
+    "strictInjectionParameters": true
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitThis": true,
+    "outDir": "./dist/tsc",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "types": ["chrome", "zone.js"],
+    "lib": ["es2017", "dom"]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "defaultProject": "extension",
+  "projects": {
+    "extension": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "aot": false,
+            "outputPath": "dist/dev",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "tsconfig.json",
+            "stylePreprocessorOptions": { "includePaths": ["node_modules"] },
+            "assets": [
+              "src/asset",
+              {
+                "glob": "manifest.json",
+                "input": "src",
+                "output": "/"
+              }
+            ],
+            "styles": ["src/style.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputPath": "dist/prod",
+              "sourceMap": false,
+              "extractCss": true,
+              "aot": true,
+              "vendorChunk": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "version": 1
+}

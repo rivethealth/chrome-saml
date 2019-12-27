@@ -1,0 +1,10 @@
+<div>
+  Last SAML response sent to
+  <span class="url">{{ url | async }}</span>
+</div>
+<action-value [value]="encoded | async">
+  <ng-container title>Base 64</ng-container>
+</action-value>
+<action-value [value]="decoded | async">
+  <ng-container title>XML</ng-container>
+</action-value>
