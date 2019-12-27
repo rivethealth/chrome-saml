@@ -4,6 +4,10 @@ See the most recent SAML response in the browser.
 
 This is useful for other programs requiring SAML responses.
 
+<p align="center">
+  <img alt="Screenshot" src="doc/screenshot.png">
+</p>
+
 For example, the AWS CLI:
 
 ```txt
@@ -23,8 +27,10 @@ aws sts assume-role-with-saml \
 
 ## Full example: Google + AWS
 
-1. Add browser bookmark for Google-initiated login, e.g. https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
+1. Add browser bookmark for Google-initiated login, e.g.
+   https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
 
-2. Copy [`examples/aws-auth.py`]('examples/aws-auth.py'), and replace variables.
+2. Copy [`example/aws-auth.py`](example/aws-auth.py), and replace variables.
 
-Authenticate AWS CLI by clicking on bookmark, copying SAML response, and running script.
+Authenticate AWS CLI by clicking on bookmark, copying SAML response, and running
+script.

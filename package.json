@@ -28,6 +28,7 @@
     "build": "rm -fr dist/dev && ng build",
     "build-prod": "rm -fr dist/prod && ng build --prod",
     "format": "prettier --write '{src/**/,}*.{css,html,json,md,scss,ts}'",
+    "extension": "cd dist/prod && zip -r ../extension .",
     "watch": "rm -fr dist/dev && ng build --watch"
   },
   "version": "0.0.0"
