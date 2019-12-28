@@ -7,9 +7,13 @@
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "aot": false,
+            "customWebpackConfig": {
+              "path": "./webpack-extra.config.js",
+              "mergeStrategies": { "externals": "replace" }
+            },
             "outputPath": "dist/dev",
             "index": "src/index.html",
             "main": "src/main.ts",

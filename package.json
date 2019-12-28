@@ -9,6 +9,7 @@
     "@angular/material": "~8.2.0",
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
+    "@angular-builders/custom-webpack": "~8.4.0",
     "moment": "~2.24.0",
     "rxjs": "~6.5.0",
     "zone.js": "~0.9.0"
@@ -21,6 +22,7 @@
     "@types/chrome": "~0.0.0",
     "@types/moment": "~2.13.0",
     "prettier": "~1.18.0",
+    "source-map-explorer": "~2.1.2",
     "typescript": "~3.4.0"
   },
   "license": "MIT",
@@ -28,6 +30,7 @@
   "scripts": {
     "build": "rm -fr dist/dev && ng build",
     "build-prod": "rm -fr dist/prod && ng build --prod",
+    "explore": "rm -fr dist/explore && ng build --prod --outputPath dist/explore --sourceMap true && find dist/explore -name '*.css' -or -name '*.js' -print0 | xargs -0 source-map-explorer --html dist/explore.html && echo dist/explore.html",
     "format": "prettier --write '{src/**/,}*.{css,html,json,md,scss,ts}'",
     "extension": "cd dist/prod && zip -r ../extension .",
     "watch": "rm -fr dist/dev && ng build --watch"
