@@ -17,6 +17,12 @@ aws sts assume-role-with-saml \
     --saml-assertion <base64_saml_response>
 ```
 
+## Install
+
+Download ZIP from [Releases](https://github.com/rivethealth/chrome-saml/releases), and add to Chrome extensions. (Developer mode may be required.)
+
+Chrome Webstore listing is currently under review.
+
 ## Usage
 
 1. Perform your normal SAML login via Chrome.
