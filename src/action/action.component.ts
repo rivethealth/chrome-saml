@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { queryTabs } from '../chrome';
 import { BackgroundWindow } from '../background-schema';
+import * as moment from 'moment';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -20,6 +21,13 @@ export class ActionComponent {
   private readonly response = this.currentTab.then(([tab]) =>
     this.background.responses.get(tab.id),
   );
+
+  readonly duration = this.response
+    .then(message => {
+      console.log(message);
+      return message;
+    })
+    .then(message => moment(message.time).fromNow());
 
   readonly url = this.response.then(message => message.url);
 

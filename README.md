@@ -10,7 +10,9 @@ This is useful for other (non-web) programs requiring SAML responses.
 
 ## Install
 
-Enable developer mode. Download ZIP from [Releases](https://github.com/rivethealth/chrome-saml/releases), and add to Chrome extensions.
+Enable developer mode. Download ZIP from
+[Releases](https://github.com/rivethealth/chrome-saml/releases), and add to
+Chrome extensions.
 
 Chrome Webstore listing is currently under review.
 
@@ -26,7 +28,8 @@ Chrome Webstore listing is currently under review.
 
 ### Google
 
-Find your IdP and SP ids, and bookmark https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
+Find your IdP and SP ids, and bookmark
+https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
 
 ## SP examples
 

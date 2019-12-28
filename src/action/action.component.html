@@ -1,5 +1,5 @@
 <div>
-  Last SAML response sent to
+  SAML response sent {{ duration | async }} to
   <span class="url">{{ url | async }}</span>
 </div>
 <action-value [value]="encoded | async">

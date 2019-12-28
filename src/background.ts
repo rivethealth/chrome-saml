@@ -18,7 +18,7 @@ function enable(tabId: number) {
 
 const intercept = chromeEvent(
   chrome.webRequest.onBeforeRequest,
-  { urls: ['<all_urls>'] },
+  { urls: ['http://*/*', 'https://*/*'] },
   ['requestBody'],
 ).pipe(
   filter(([event]) => 0 <= event.tabId),
@@ -30,6 +30,7 @@ const intercept = chromeEvent(
       event.requestBody.formData.SAMLResponse
     ) {
       info = {
+        time: new Date(),
         url: event.url,
         value: event.requestBody.formData.SAMLResponse[0],
       };
@@ -48,6 +49,9 @@ const update = chromeEvent(chrome.tabs.onUpdated).pipe(
   tap(([tabId]) => {
     if (responses.has(tabId)) {
       enable(tabId);
+    } else if (!window['browser']) {
+      // ironically, this deactivates a dropdown it in Chrome
+      chrome.pageAction.show(tabId);
     }
   }),
 );
