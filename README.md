@@ -36,7 +36,7 @@ Chrome Webstore listing is currently under review.
 1. Add browser bookmark for Google-initiated login, e.g.
    https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
 
-2. Copy [`example/aws-auth.py`](example/aws-auth.py), and replace variables.
+2. Download [`example/aws-auth.py`](example/aws-auth.py). Run `aws-auth.py --help` to list options. 
 
 Authenticate AWS CLI by clicking on bookmark, copying SAML response, and running
 script.
