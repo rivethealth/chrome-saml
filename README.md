@@ -1,25 +1,16 @@
 # Chrome SAML
 
-See the most recent SAML response in the browser.
+See the most recent SAML response in the web browser.
 
-This is useful for other programs requiring SAML responses.
+This is useful for other (non-web) programs requiring SAML responses.
 
 <p align="center">
   <img alt="Screenshot" src="doc/screenshot.png">
 </p>
 
-For example, the AWS CLI:
-
-```txt
-aws sts assume-role-with-saml \
-    --role-arn arn:aws:iam::000000000000:role/Admin \
-    --principal-arn arn:aws:iam::000000000000:saml-provider/Google \
-    --saml-assertion <base64_saml_response>
-```
-
 ## Install
 
-Download ZIP from [Releases](https://github.com/rivethealth/chrome-saml/releases), and add to Chrome extensions. (Developer mode may be required.)
+Enable developer mode. Download ZIP from [Releases](https://github.com/rivethealth/chrome-saml/releases), and add to Chrome extensions.
 
 Chrome Webstore listing is currently under review.
 
@@ -31,12 +22,21 @@ Chrome Webstore listing is currently under review.
 
 3. Copy the base64 encoded or raw SAML response.
 
-## Full example: Google + AWS
+## IdP examples
 
-1. Add browser bookmark for Google-initiated login, e.g.
-   https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
+### Google
 
-2. Download [`example/aws-auth.py`](example/aws-auth.py). Run `aws-auth.py --help` to list options. 
+Find your IdP and SP ids, and bookmark https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
 
-Authenticate AWS CLI by clicking on bookmark, copying SAML response, and running
-script.
+## SP examples
+
+### AWS CLI
+
+```txt
+aws sts assume-role-with-saml \
+    --role-arn arn:aws:iam::000000000000:role/Admin \
+    --principal-arn arn:aws:iam::000000000000:saml-provider/Google \
+    --saml-assertion <base64_saml_response>
+```
+
+See https://github.com/rivethealth/aws-saml-cli for a helpful solution.
