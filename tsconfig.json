@@ -1,5 +1,6 @@
 {
   "angularCompilerOptions": {
+    "entryModule": "./src/action/module#ActionModule",
     "fullTemplateTypeCheck": true,
     "preserveWhitespaces": false,
     "strictInjectionParameters": true

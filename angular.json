@@ -28,6 +28,13 @@
           },
           "configurations": {
             "production": {
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/env/environment.ts",
+                  "with": "src/env/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputPath": "dist/prod",
               "sourceMap": false,

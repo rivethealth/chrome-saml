@@ -1,11 +1,14 @@
-import 'zone.js/dist/zone';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { fromEvent } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import 'zone.js/dist/zone';
 import { ActionModule } from './action/module';
+import { prod } from './env/environment';
 
-enableProdMode();
+if (prod) {
+  enableProdMode();
+}
 
 platformBrowserDynamic()
   .bootstrapModule(ActionModule, { preserveWhitespaces: false })

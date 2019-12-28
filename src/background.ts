@@ -12,7 +12,7 @@ function enable(tabId: number) {
   chrome.pageAction.setTitle({ tabId, title: 'SAML response' });
   chrome.pageAction.setPopup({
     tabId,
-    popup: `index.html?action`,
+    popup: `index.html?ui`,
   });
 }
 

@@ -2,20 +2,6 @@
 # yarn lockfile v1
 
 
-"@angular-contrib/common@~0.0.0":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@angular-contrib/common/-/common-0.0.7.tgz#59f625bafee406286b808475c3dd13e693a90cf8"
-  integrity sha512-be1P3MEPqbjJRqkwWzr+V57NoOG4qpENSc55vV28RtzhN5gcA4XLMDmJnjMgLbahiQUk9eyChuU1InmO5lAi0g==
-  dependencies:
-    tslib "^1.9.0"
-
-"@angular-contrib/core@~0.0.0":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@angular-contrib/core/-/core-0.0.7.tgz#0f40d15af2b610f875d0f29dc79bf46972325748"
-  integrity sha512-XforHnkg8JGcQPiu/0AnISjk27Wjaa0VOP9jov2+ZK6wTX6uS5YfRGOT3J7ku9OqzQpPsbUnF1WfkKatuUcfyQ==
-  dependencies:
-    tslib "^1.9.0"
-
 "@angular-devkit/architect@0.801.3":
   version "0.801.3"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.801.3.tgz#7afce7623baefb896367e7038f4c4922cc9c2ec5"
