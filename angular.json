@@ -11,10 +11,10 @@
           "options": {
             "aot": false,
             "customWebpackConfig": {
-              "path": "./webpack-extra.config.js",
+              "path": "webpack-extra.config.js",
               "mergeStrategies": { "externals": "replace" }
             },
-            "outputPath": "dist/dev",
+            "outputPath": "target/ng/dev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "tsconfig.json",
@@ -40,7 +40,7 @@
                 }
               ],
               "optimization": true,
-              "outputPath": "dist/prod",
+              "outputPath": "target/ng/prod",
               "sourceMap": false,
               "extractCss": true,
               "aot": true,

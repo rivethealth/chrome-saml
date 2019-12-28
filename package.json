@@ -27,13 +27,5 @@
   },
   "license": "MIT",
   "private": true,
-  "scripts": {
-    "build": "rm -fr dist/dev && ng build",
-    "build-prod": "rm -fr dist/prod && ng build --prod",
-    "explore": "rm -fr dist/explore && ng build --prod --outputPath dist/explore --sourceMap true && find dist/explore -name '*.css' -or -name '*.js' -print0 | xargs -0 source-map-explorer --html dist/explore.html && echo dist/explore.html",
-    "format": "prettier --write '{src/**/,}*.{css,html,json,md,scss,ts}'",
-    "extension": "cd dist/prod && zip -r ../extension .",
-    "watch": "rm -fr dist/dev && ng build --watch"
-  },
   "version": "0.0.0"
 }
