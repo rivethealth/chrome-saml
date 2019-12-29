@@ -42,4 +42,4 @@ aws sts assume-role-with-saml \
     --saml-assertion <base64_saml_response>
 ```
 
-See https://github.com/rivethealth/aws-saml-cli for a helpful solution.
+Or use [aws-cli-saml](https://github.com/rivethealth/aws-cli-saml).
