@@ -1,8 +1,12 @@
 # Chrome SAML
 
-See the most recent SAML response in the web browser.
+[![Chrome extension](https://img.shields.io/chrome-web-store/v/cbenhegonmmoommjjbklhfjlgclpcong.svg)](https://chrome.google.com/webstore/detail/saml-response/cbenhegonmmoommjjbklhfjlgclpcong)
 
-This is useful for other (non-web) programs requiring SAML responses.
+View and copy the most recent SAML response from the web browser.
+
+This is useful for giving other programs (e.g. a CLI utility) a SAML response.
+
+Works with Google Chrome and Mozilla Firefox.
 
 <p align="center">
   <img alt="Screenshot" src="doc/screenshot.png">
@@ -10,11 +14,11 @@ This is useful for other (non-web) programs requiring SAML responses.
 
 ## Install
 
-Enable developer mode. Download ZIP from
-[Releases](https://github.com/rivethealth/chrome-saml/releases), and add to
-Chrome extensions.
+[Chrome Web Store](https://chrome.google.com/webstore/detail/saml-response/cbenhegonmmoommjjbklhfjlgclpcong)
 
-Chrome Webstore listing is currently under review.
+Or download ZIP from
+[Releases](https://github.com/rivethealth/chrome-saml/releases) and manually
+install as a browser extension.
 
 ## Usage
 
@@ -23,6 +27,14 @@ Chrome Webstore listing is currently under review.
 2. Click on the key icon in the upper right.
 
 3. Copy the base64 encoded or raw SAML response.
+
+## Rationale
+
+The was developed after running into
+[anti-robot measures](https://github.com/cevoaustralia/aws-google-auth/issues/160)
+with GSuite SAML. Instead of replicating a browser, this approach uses your real
+browser and human to authenticate; after which the SAML can be copy-pasted to
+its destination.
 
 ## IdP examples
 
