@@ -23,10 +23,6 @@ export class ActionComponent {
   );
 
   readonly duration = this.response
-    .then(message => {
-      console.log(message);
-      return message;
-    })
     .then(message => moment(message.time).fromNow());
 
   readonly url = this.response.then(message => message.url);
