@@ -41,7 +41,6 @@
               ],
               "optimization": true,
               "outputPath": "target/ng/prod",
-              "sourceMap": false,
               "extractCss": true,
               "aot": true,
               "vendorChunk": false
