@@ -40,7 +40,40 @@ its destination.
 
 Use GSuite as the IdP where the SP is the AWS CLI.
 
-1. Go to the SAML sign in URL, e.g. https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false, and enter credentials.
-2. After being redirected to the AWS web console, copy the base-64 encoded SAML response captured by the browser extension.
-3. Run the command `aws sts assume-role-with-saml` or the even more convenient [aws-cli-saml](https://github.com/rivethealth/aws-cli-saml).
-4. Paste the SAML response, and a credentialed session is created for the AWS CLI.
+1. Go to the SAML sign in URL, e.g.
+   https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false,
+   and enter credentials.
+2. After being redirected to the AWS web console, copy the base-64 encoded SAML
+   response captured by the browser extension.
+3. Run the command `aws sts assume-role-with-saml` or the even more convenient
+   [aws-cli-saml](https://github.com/rivethealth/aws-cli-saml).
+4. Paste the SAML response, and a credentialed session is created for the AWS
+   CLI.
+
+## Developing
+
+### Run
+
+Requires [GNU Make](https://www.gnu.org/software/make/) and
+[yarn](https://yarnpkg.com/).
+
+```sh
+make extension
+```
+
+Navigate to chrome://extensions/ in Google Chrome, enable developer mode, and
+load unpacked extension from target/ng/dev/.
+
+### Format
+
+```sh
+make format
+```
+
+### Explore size
+
+```sh
+make explore
+```
+
+Open target/explore.html.
