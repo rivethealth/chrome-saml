@@ -36,22 +36,11 @@ with GSuite SAML. Instead of replicating a browser, this approach uses your real
 browser and human to authenticate; after which the SAML can be copy-pasted to
 its destination.
 
-## IdP examples
+## Example
 
-### Google
+Use GSuite as the IdP where the SP is the AWS CLI.
 
-Find your IdP and SP ids, and bookmark
-https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false
-
-## SP examples
-
-### AWS CLI
-
-```txt
-aws sts assume-role-with-saml \
-    --role-arn arn:aws:iam::000000000000:role/Admin \
-    --principal-arn arn:aws:iam::000000000000:saml-provider/Google \
-    --saml-assertion <base64_saml_response>
-```
-
-Or use [aws-cli-saml](https://github.com/rivethealth/aws-cli-saml).
+1. Go to the SAML sign in URL, e.g. https://accounts.google.com/o/saml2/initsso?idpid=A0000000&spid=000000000000&forceauthn=false, and enter credentials.
+2. After being redirected to the AWS web console, copy the base-64 encoded SAML response captured by the browser extension.
+3. Run the command `aws sts assume-role-with-saml` or the even more convenient [aws-cli-saml](https://github.com/rivethealth/aws-cli-saml).
+4. Paste the SAML response, and a credentialed session is created for the AWS CLI.
