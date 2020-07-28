@@ -12,6 +12,6 @@ if (prod) {
 
 platformBrowserDynamic()
   .bootstrapModule(ActionModule, { preserveWhitespaces: false })
-  .then(module =>
+  .then((module) =>
     fromEvent(window, 'unload').pipe(tap(() => module.destroy())),
   );

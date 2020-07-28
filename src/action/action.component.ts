@@ -22,14 +22,15 @@ export class ActionComponent {
     this.background.responses.get(tab.id),
   );
 
-  readonly duration = this.response
-    .then(message => moment(message.time).fromNow());
+  readonly duration = this.response.then((message) =>
+    moment(message.time).fromNow(),
+  );
 
-  readonly url = this.response.then(message => message.url);
+  readonly url = this.response.then((message) => message.url);
 
-  readonly encoded = this.response.then(message => message.value);
+  readonly encoded = this.response.then((message) => message.value);
 
   readonly decoded = this.response
-    .then(message => atob(message.value))
+    .then((message) => atob(message.value))
     .catch(() => '');
 }
