@@ -1,4 +1,5 @@
 {
+  "cli": { "analytics": false },
   "defaultProject": "extension",
   "projects": {
     "extension": {
