@@ -14,5 +14,5 @@
     "default_title": "No SAML response"
   },
   "permissions": ["http://*/*", "https://*/*", "webRequest"],
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
