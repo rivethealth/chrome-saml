@@ -10,7 +10,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular-builders/custom-webpack": "~9.1.0",
-    "moment": "~2.25.0",
+    "moment": "~2.29.2",
     "rxjs": "~6.5.0",
     "zone.js": "~0.10.0"
   },
