@@ -67,26 +67,16 @@ target/node_modules.log: package.json $(wildcard yarn.lock)
 NG_SRC := angular.json tsconfig.json $(shell find src -name '*.css' -o -name '*.html' -o -name '*.json' -o -name '*.scss' -o -name '*.ts')
 
 .PHONY: build
-build: target/ng/dev.log
-
-.PHONY: build-prod
-build-prod: target/ng/prod.log
+build: target/ng/build.log
 
 .PHONY: watch
 watch: target/node_modules.log
 	rm -fr target/ng/dev
 	ng build --watch
 
-target/ng/dev.log: target/node_modules.log $(NG_SRC)
+target/ng/build.log: target/node_modules.log $(NG_SRC)
 	rm -fr $(@:.log=)
 	ng build
-	mkdir -p $(@D)
-	> $@
-	du -hs $(@:.log=)
-
-target/ng/prod.log: target/node_modules.log $(NG_SRC)
-	rm -fr $(@:.log=)
-	ng build --prod
 	mkdir -p $(@D)
 	> $@
 	du -hs $(@:.log=)
@@ -97,18 +87,6 @@ target/ng/explore.log: target/node_modules.log $(NG_SRC)
 	mkdir -p $(@D)
 	> $@
 	du -hs $(@:.log=)
-
-###
-# Extension
-###
-
-.PHONY: extension
-extension: target/extension.zip
-
-target/extension.zip: target/ng/prod.log
-	mkdir -p $(@D)
-	cd $(<:.log=) && zip -r ../../extension .
-	du -hs $@
 
 ###
 # Explore

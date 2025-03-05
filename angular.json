@@ -10,12 +10,11 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "aot": false,
             "customWebpackConfig": {
               "path": "webpack-extra.config.js",
               "mergeStrategies": { "externals": "replace" }
             },
-            "outputPath": "target/ng/dev",
+            "outputPath": "target/ng/build",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "tsconfig.json",
@@ -29,23 +28,12 @@
               }
             ],
             "styles": ["src/style.scss"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "buildOptimizer": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/env/environment.ts",
-                  "with": "src/env/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputPath": "target/ng/prod",
-              "extractCss": true,
-              "aot": true,
-              "vendorChunk": false
-            }
+            "scripts": [],
+            "buildOptimizer": true,
+            "optimization": true,
+            "extractCss": true,
+            "aot": true,
+            "vendorChunk": false
           }
         }
       }
