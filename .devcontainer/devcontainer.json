@@ -1,0 +1,4 @@
+{
+	"name": "chrome-saml",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:14"
+}
