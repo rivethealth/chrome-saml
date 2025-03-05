@@ -1,6 +1,7 @@
 {
-  "background": { "page": "index.html?background", "persistent": false },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "description": "See most recent SAML response",
   "icons": {
     "16": "asset/icon/16.png",
@@ -8,11 +9,17 @@
     "128": "asset/icon/128.png"
   },
   "name": "SAML Response",
-  "manifest_version": 2,
-  "page_action": {
+  "manifest_version": 3,
+  "action": {
     "default_icon": "asset/icon/16-disabled.png",
     "default_title": "No SAML response"
   },
-  "permissions": ["http://*/*", "https://*/*", "webRequest"],
-  "version": "1.0.2"
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": [
+    "webRequest"
+  ],
+  "version": "1.0.3"
 }
